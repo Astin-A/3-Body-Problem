@@ -10,4 +10,9 @@ mA = Ms
 mB = 0.8*Ms
 rB = rA*mA/mB
 
-sA = sphere()
+sA = sphere(pos=vector(rA,0,0),radius=Rs,color=color.yellow)
+sB = sphere(pos=vector(-rB,0,0),radius=Rs, color=color.cyan)
+
+vA = sqrt(G*mB*rA)/(rA+rB)
+sA.p = mA*vA*vector(0,1,0)
+sB.p = -sA.p
